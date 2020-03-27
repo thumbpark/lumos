@@ -1,7 +1,7 @@
 /** 
  * Facebook group page > right click > inspect > ESC click > console
  * <ul class = "_7791">
- * 
+ * https://opentutorials.org/course/2897/17593
  */
 
 var winnernum = 3;

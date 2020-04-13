@@ -11,16 +11,33 @@
 
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  
+
   <!-- selecting a tag by css selector, element style -->
-  <input type="button" value="night" onClick="
+  <input type="button" value="night" onclick="
     document.querySelector('body').style.backgroundColor= 'black';
     document.querySelector('body').style.color= 'white';
    ">
-  <input type="button" value="day" OnClick="
+  <input type="button" value="day" onclick="
     document.querySelector('body').style.backgroundColor= 'white';
     document.querySelector('body').style.color= 'black';
   ">
+  <br>
+  <br>
+
+  <p> Make them to one button </p>
+  <!-- toggle by conditional statements
+  JavaScript get element value-->
+  <input id="nightday" type="button" value="night" onclick="
+      if(document.querySelector('#nightday').value === 'night'){
+         document.querySelector('body').style.backgroundColor= 'black';
+         document.querySelector('body').style.color = 'white';
+         document.querySelector('#nightday').value = 'day';
+      } else {
+        document.querySelector('body').style.backgroundColor= 'white';
+        document.querySelector('body').style.color= 'black';
+        document.querySelector('#nightday').value = 'night';
+      }         
+    ">
 
   <h2 style="color:orchid; background-color:thistle">JavaScript</h2>
   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero illum laudantium non, repellat architecto quos magnam nisi est qui recusandae temporibus ratione. Beatae consequuntur earum optio, repellendus magnam ab inventore.</p>

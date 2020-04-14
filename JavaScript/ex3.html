@@ -12,6 +12,16 @@
 <body>
   <h1><a href="index.html">WEB</a></h1>
 
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+
+  <br>
+  <br>
+
+  <h3> Day and Night buttons - querySelector </h3>
   <!-- selecting a tag by css selector, element style -->
   <input type="button" value="night" onclick="
     document.querySelector('body').style.backgroundColor= 'black';
@@ -25,7 +35,7 @@
   <br>
   <br>
 
-  <p> Make them to one button </p>
+  <h3> Make them to one button/toggle - if-else </h3>
   <!-- toggle by conditional statements
   JavaScript get element value-->
   <input id="nightday" type="button" value="night" onclick="
@@ -40,12 +50,16 @@
       }         
     ">
 
+  <br>
+
   <h2 style="color:orchid; background-color:thistle">JavaScript</h2>
   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero illum laudantium non, repellat architecto quos magnam nisi est qui recusandae temporibus ratione. Beatae consequuntur earum optio, repellendus magnam ab inventore.</p>
-  </div>
-  </div>
 
-  <!-- refectoring - removing duplicates
+  <br>
+  <br>
+
+  <h3> refactoring - this and variable </h3>
+  <!-- refactoring - removing duplicates
   use "this" instead of "id"
   this indicates the tag your line belongs-->
   <input type="button" value="night" onclick="
@@ -55,11 +69,47 @@
           target.style.color = 'white';
           this.value = 'day';
       } else {
-        target.style.backgroundColor= 'white';
-        target.style.color= 'black';
-        this.value = 'night';
+          target.style.backgroundColor= 'white';
+          target.style.color= 'black';
+          this.value = 'night';
       }         
     ">
+
+  <br>
+  <br>
+
+  <h3> change the color of links regarding the background color - loop and array </h3>
+  <!-- get element by css selector multiple-->
+  <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if(this.value === 'night'){
+            target.style.backgroundColor= 'black';
+            target.style.color = 'white';
+            this.value = 'day';   
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while (i < alist.length) {
+              alist[i].style.color = 'powderblue';
+              i = i+1;              
+            }        
+
+        
+        } else {
+            target.style.backgroundColor= 'white';
+            target.style.color= 'black';
+            this.value = 'night';  
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while (i < alist.length) {
+              alist[i].style.color = 'blue';
+              i = i+1;              
+            }             
+            
+        }         
+      ">
+
 
 
 </body>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB2 - JavaScript</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script> //create an object, get data from an object, add data to an object
+        var coworkers = {
+            "frontend": "thumbpark",
+            "backend": "rezabfil-sec"
+        }; // create an object
+        document.write("frontend programmer : " + coworkers.frontend + "<br>"); // get data from an object
+        document.write("backend programmer : " + coworkers.backend + "<br>");
+        coworkers.support = "orlik";// add data to an object
+        document.write("support : " + coworkers.support + "<br>"); //test
+        coworkers["support sometimes"] = "macek"; // when there is a space between letters, use retengular bracket without a dot
+        document.write("support : " + coworkers["support sometimes"] + "<br>");
+    </script>
+
+    <h2>Iterate</h2>
+    <script> // excute the code between braces as the-number-of-the-data-in-coworkerstimes.
+        for (var key in coworkers) {
+            document.write(key + ' : ' + coworkers[key] + '<br>');
+        }
+
+    </script>
+
+    <h2>Property and Method</h2>
+    <script>
+        coworkers.showAll = function () {
+            for (var key in this) {
+                document.write(key + ' : ' + this[key] + '<br>');
+            }
+        }
+        coworkers.showAll();  // As showAll is one of the data from coworkers, it will be shown together. 
+        // variable in object is called property, function in object is called method
+    </script>
+</body>
+
+</html>
